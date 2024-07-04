@@ -1,0 +1,189 @@
+// Primary
+$nutMeg: hsl(14, 45%, 36%);
+$darkRaspberry: hsl(332, 51%, 32%);
+
+// Neutral
+
+$white: hsl(0, 0%, 100%);
+$roseWhite: hsl(330, 100%, 98%);
+$eggShell: hsl(30, 54%, 90%);
+$lightGrey: hsl(30, 18%, 87%);
+$wengeBrown: hsl(30, 10%, 34%);
+$darkCharcoal: hsl(24, 5%, 18%);
+
+// Font
+$fontWeights:("4":400,"6":600,"7":700);
+$youngSerif: "Young Serif";
+$outfit: "Outfit";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $outfit;
+    color: $wengeBrown;
+    font-weight: map-get($fontWeights, "4" );
+    line-height: 1.5;
+}
+body{
+    background-color: $eggShell;
+}
+main{
+    min-width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $eggShell;
+    #attribution{
+        text-align: center;
+        margin: 2% auto 3% auto;
+    }
+}
+h1{
+    font-family: $youngSerif;
+    font-weight: map-get($fontWeights, "4");
+    font-size: 2rem;
+}
+p,li,td{
+    font-size: 1.2rem;
+}
+hr{
+    margin: 5% auto;
+    color: $wengeBrown;
+}
+#main-section{
+    margin: 5% auto 2% auto;
+    width: 50rem;
+    max-width: 1440px;
+    padding: 2rem;
+    background-color: $white;
+    border-radius: 1.5rem;
+    #img-div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img{
+            width: 100%;
+            border-radius: 1rem;
+        }
+    }
+    #recipe-head{
+        
+        h1{
+            margin: 1.5rem auto;
+            font-size: 2.975rem;
+            color: $darkCharcoal;
+        }
+        p{
+            margin: 1rem auto;
+        }
+    }
+    #p-time{
+        background-color: $roseWhite;
+        padding: 30px 25px;
+        border-radius: 1rem;
+        margin: 5% auto;
+        h3{
+            font-size: 1.3rem;
+            margin-bottom: 3%;
+            color :$darkRaspberry;
+            font-weight: map-get($fontWeights, "7");
+        }
+        ul{
+            padding-left: 25px;
+            li{
+                padding: 3px 0px 5px 15px;
+                span{
+                    font-weight: map-get($fontWeights ,"6" );
+                }
+            }
+        }
+    }
+
+    #ingredients{
+        margin: 5% auto;
+        h1{
+            color: $nutMeg;
+        }
+        ul{
+            margin: 3% auto;
+            padding-left: 25px;
+            li{
+                padding: 3px 0px 5px 15px;
+                span{
+                    font-weight: map-get($fontWeights ,"6" );
+                }
+            }
+            li::marker{
+                color: $nutMeg;
+                font-size: .8rem;
+            }
+        }
+    }
+    #instructions{
+        margin: 5% auto;
+        h1{
+            color: $nutMeg;
+        }
+        ol{
+            margin: 3% auto;
+            padding-left: 25px;
+            li{
+                padding: 3px 0px 5px 15px;
+                span{
+                    font-weight: map-get($fontWeights ,"7" );
+                }
+            }
+            li::marker{
+                color: $darkRaspberry;
+                font-weight: map-get($fontWeights, "6" );
+                
+            }
+        }
+    }
+    #nutrition{
+        margin: 5% auto;
+        h1{
+            color: $nutMeg;
+        }
+        p{
+            margin: 3% auto;
+        }
+        table{
+            width: 100%;
+            td{
+                border-bottom: 1.2px solid $lightGrey;
+                padding: 1.3rem 1rem;
+            }
+            td:nth-child(2){
+                font-weight: map-get($fontWeights, "7" );
+                color: $nutMeg;
+
+            }
+        }
+    }
+    
+}
+
+@media only screen and (max-width: 375px) {
+    hr{
+        width: 85%;
+    }
+    #main-section{
+        margin: 0;
+        border-radius: 0;
+        padding: 0;
+        #img-div{
+            width: 100%;
+            img{
+                width: 100%;
+                border-radius: 0;
+            }
+        }
+        #recipe-head,#p-time,#ingredients,#instructions,#nutrition{
+            margin: 3% 3%;
+        }
+    }
+}
