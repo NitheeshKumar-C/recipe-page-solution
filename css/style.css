@@ -149,7 +149,7 @@ hr {
   color: hsl(14deg, 45%, 36%);
 }
 
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 480px) {
   hr {
     width: 85%;
   }
